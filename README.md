@@ -24,7 +24,7 @@ $ docker compose build
 Al interior de la carpeta /Sripts debes crear un documento env.env el cual debe contener las siguiente variables, puedes guiarte con el documento example.env :
 
 ```
-null
+FLASK_ENV=dev
 ```
 
 
