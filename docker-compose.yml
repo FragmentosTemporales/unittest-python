@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  scripts:
+    build:
+      context: scripts
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - ./scripts/env.env
+    volumes:
+      - ./scripts:/scripts
+    command: flask run
+
+#  postgres:
+#    image: postgres
+#    restart: always
+#    ports:#
+#      - "5432:5432"
+#    environment:
+#      - POSTGRES_PASSWORD=Dante123.
+#      - POSTGRES_USER=admin
+#      - POSTGRES_DB=postgres
+#    volumes:
+#      - "./db/pgdata:/var/lib/postgresql/data"
+
+#volumes:
+#  pgdata:
